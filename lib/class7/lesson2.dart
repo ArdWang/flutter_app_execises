@@ -1,0 +1,52 @@
+import 'package:flutter/material.dart';
+
+// 列表组件 ListView 
+
+void main() => runApp(MyApp());
+
+
+class MyApp extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home:Scaffold(
+        appBar:AppBar(
+          title: Text("flutter demo"),
+        ),
+        body:HomeContent(),
+      )
+    );
+  }
+}
+
+class HomeContent extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return ListView(
+      padding: EdgeInsets.all(
+        10,
+      ),
+      children: <Widget>[
+        ListTile(
+          leading: Icon(
+              Icons.settings,
+              color: Colors.blue,
+              size: 40,
+            ),
+          trailing: Icon(
+            Icons.hdr_on,
+            color:Colors.yellow,
+            size:30,
+          ),  
+          title: Text('华北温度垂直下降了好多读呢',
+            style: TextStyle(
+              fontSize:18.0,
+            ),
+          ),
+          subtitle: Text('华北温度垂直下降了读呢华北温度垂直下降了好多读呢'),
+        ),
+       
+      ],
+    );
+  }
+}
